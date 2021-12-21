@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Tip Calculator</h1>
+      <div class="input_container">
+        <div class="total_bill">
+          <span class="currency_sign">$</span>
+          <input type="number" id="billTotal" placeholder="Total bill" />
+        </div>
+        <form action="/action_page.php">
+          <div class="tip_procent">
+            <label for="tip">Tip:</label>
+            <input
+              type="range"
+              id="tipInput"
+              value="0"
+              min="0"
+              max="100"
+              name="tip"
+              oninput="tipOutput.value = value+'%'"
+            />
+            <output id="tipOutput">0%</output>
+          </div>
+        </form>
+      </div>
+      <div class="results_container">
+        <h2>Results</h2>
+        <div class="tip_amount_container">
+          <p>Tip amount</p>
+          <div id="totalTipAmount">0.00</div>
+        </div>
+        <div class="total_bill_with_tip">
+          <p>Total bill with tip</p>
+          <div id="totalBill">0.00</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
